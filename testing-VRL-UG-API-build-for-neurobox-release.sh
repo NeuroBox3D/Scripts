@@ -1,3 +1,5 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: tests VRL UG API
 RELEASE=$1
 RLS_DIR=/Volumes/MacintoshHD2/neurobox/rls/$RELEASE/
 

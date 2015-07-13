@@ -1,13 +1,10 @@
 #!/bin/bash
-#ug library name
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds VRL-UG for NeuroBox
 
-
-#place of the native compiled ug library
 UG_LIB_FOLDER_OSX=/Volumes/MacintoshHD2/neurobox/vrl-ug-natives/osx/
 UG_LIB_FOLDER_LINUX=/Volumes/MacintoshHD2/neurobox/vrl-ug-natives/linux/
 UG_LIB_FOLDER_WINDOWS=/Volumes/MacintoshHD2/neurobox/vrl-ug-natives/windows/
-
-
 
 ZIP_NAME=natives.zip
 

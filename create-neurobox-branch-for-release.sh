@@ -1,5 +1,6 @@
 #!/bin/bash
-## author: stephan
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: created NeuroBox release
 ##   what: 1. creates a new neurobox release branch, e. g. v0.1 from the current ug trunk and
 ##         2. checkout the given git tags for the RELEASE, e. g. v0.1 from all plugins
 

@@ -1,4 +1,6 @@
 #!/bin/bash
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds VRL-UG for NeuroBox
 
 RELEASE=$1
 RLS_DIR=/Volumes/MacintoshHD2/neurobox/rls/$RELEASE/

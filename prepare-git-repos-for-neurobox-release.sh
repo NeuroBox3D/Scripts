@@ -1,3 +1,6 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: prepares git repositories
+
 BASEDIR=/Users/ug/Local/neurobox/
 #PROJECTS=(VRL VRL-UG VRL-UserData VRL-NeuroBox-Plugin VRL-NeuronalTopologyImporter-Plugin)
 PROJECTS=(VRL-NeuronalTopologyImporter-Plugin)

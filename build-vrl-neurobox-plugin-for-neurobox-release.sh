@@ -1,4 +1,8 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief builds NeuroBox 
+
 cd /Users/ug/Local/neurobox/VRL-NeuroBox-Plugin/
+
 git pull
 sed -i.bak 's/\(vrldir\).*/\1=\/Volumes\/MacintoshHD2\/neurobox\/final-jars\//' build.properties
 ./gradlew build

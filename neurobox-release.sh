@@ -1,4 +1,5 @@
-### author stephan
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: master script for NeuroBox releases
 ## todo: error handling 
 
 RELEASE=$1

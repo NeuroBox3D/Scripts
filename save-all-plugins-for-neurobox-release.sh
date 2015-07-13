@@ -1,4 +1,5 @@
-### author stephan
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: copies release locally
 ## todo: error handling 
 
 RELEASE=$1

@@ -1,7 +1,8 @@
-# go into project folder
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds VRL-UserData for NeuroBox
+
 cd /Users/ug/Local/neurobox/VRL-UserData
 
-# get the latest code
 git checkout master 
 git pull
 

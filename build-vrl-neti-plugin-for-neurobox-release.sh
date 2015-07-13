@@ -1,3 +1,6 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds NETI plugin
+
 RELEASE=$1
 RLS_DIR="\/Volumes\/MacintoshHD2\/neurobox\/rls\/$RELEASE\/"
 

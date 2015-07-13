@@ -1,3 +1,6 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds NETI
+
 cd /Users/ug/Local/neurobox/VRL-NeuronalTopologyImporter-Plugin/
 git checkout master
 git pull

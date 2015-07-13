@@ -1,4 +1,6 @@
-# OPTIONAL clean the working folder of the user
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: tests VRL-UG-API
+
 cd /Users/ug/.vrl/0.4.2/default/plugins
 rm -rf VRL-UG*
 

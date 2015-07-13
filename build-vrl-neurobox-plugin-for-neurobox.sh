@@ -1,3 +1,6 @@
+## author: stephanmg <stephan@syntaktischer-zucker.de>
+## brief: builds NeuroBox
+
 cd /Users/ug/Local/neurobox/VRL-NeuroBox-Plugin/
 git checkout master
 git pull
