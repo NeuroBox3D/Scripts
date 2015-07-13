@@ -11,8 +11,8 @@ else
 fi
 
 echo "Copying jars to $RLS_DIR now.";
-cp /Volumes/MacintoshHD2/neurobox/final-jars/*.jar $RLS_DIR
-cp /Volumes/MacintoshHD2/neurobox/final-jars/plugin-updates/*.jar $RLS_DIR
+cp /Volumes/MacintoshHD2/neurobox/final-jars/*.jar $RLS_DIR/final-jars/
+cp /Volumes/MacintoshHD2/neurobox/final-jars/plugin-updates/*.jar $RLS_DIR/final-jars/
 
 if test -e $RLS_DIR/natives; then
 	echo "Natives directory in release directory already present: $RLS_DIR/natives"
@@ -21,4 +21,4 @@ else
 fi
 
 echo "Copying natives to $RLS_DIR now.";
-	cp -r /Volumes/MacintoshHD2/neurobox/vrl-ug-natives/* $RLS_DIR/natives/
+	cp -r /Volumes/MacintoshHD2/neurobox/vrl-ug-natives/* $RLS_DIR/vrl-ug-natives/

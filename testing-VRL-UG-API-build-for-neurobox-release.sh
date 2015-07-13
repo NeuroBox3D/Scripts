@@ -1,4 +1,5 @@
-
+RELEASE=$1
+RLS_DIR=/Volumes/MacintoshHD2/neurobox/rls/$RELEASE/
 
 # OPTIONAL clean the working folder of the user
 cd /Users/ug/.vrl/0.4.2/default/plugins
@@ -13,8 +14,10 @@ rm -rf VRL-UG*
 cd /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugins
 rm -rf VRL-UG*
 
-cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugin-updates/
-cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar /Users/ug/.vrl/0.4.2/default/plugins/
+cp $RLS_DIR/final-jars/VRL-UG.jar /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugin-updates/
+cp $RLS_DIR/final-jars/VRL-UG.jar /Users/ug/.vrl/0.4.2/default/plugins/
+#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugin-updates/
+#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar /Users/ug/.vrl/0.4.2/default/plugins/
 
 #  start the vrl-studio which triggers the installation of the new vrl-ug
 #  and the build of the vrl-ug-api
@@ -28,5 +31,5 @@ sh run.sh
 #  /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugins/
 
 # kopiere die api nach 
-scp /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugins/VRL-UG-API.jar /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG-API.jar 
+scp /Users/ug/Apps/ugInit-consolApp/.application/property-folder/plugins/VRL-UG-API.jar $RLS_DIR/final-jars/VRL-UG-API.jar 
 #scp /Users/ug/.vrl/0.4.2/default/plugin-updates/VRL-UG.jar /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar

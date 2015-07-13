@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 RELEASE=$1
 RLS_DIR=/Volumes/MacintoshHD2/neurobox/rls/$RELEASE/
 
@@ -176,7 +175,7 @@ cd ${VRL_UG_JAVA_PROJECT_FOLDER}
 /usr/local/bin/ant jar
 
 # kopiere die vrl-ug nach 
-cp /Users/ug/Apps/VRL-UG/VRL-UG/dist/VRL-UG.jar /Volumes/MacintoshHD2/neurobox/final-jars/
+cp /Users/ug/Apps/VRL-UG/VRL-UG/dist/VRL-UG.jar $RLS_DIR/final-jars/
 
 #
 # make a sound if ready with all compilings
@@ -185,9 +184,12 @@ cp /Users/ug/Apps/VRL-UG/VRL-UG/dist/VRL-UG.jar /Volumes/MacintoshHD2/neurobox/f
 cd /Users/ug/Local/neurobox/VRL-UserData
 sed -i.bak 's/\(vrl\.dir\).*/\1=\/Volumes\/MacintoshHD2\/neurobox\/final-jars\//' build.properties
 
-cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar jars/
-cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG-API.jar jars/
-cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars/
+cp $RLS_DIR/VRL-UG.jar jars/
+cp $RLS_DIR/VRL-UG-API.jar jars/
+cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars
+#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar jars/
+#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG-API.jar jars/
+#cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars/
 
 # clean the java project
 /usr/local/bin/ant clean
@@ -200,4 +202,4 @@ cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars/
 
 git stash
 
-cp dist/VRL-UserData.jar /Volumes/MacintoshHD2/neurobox/final-jars/
+cp dist/VRL-UserData.jar $RLS_DIR/final-jars/

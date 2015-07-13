@@ -1,6 +1,6 @@
 BASEDIR=/Users/ug/Local/neurobox/
 #PROJECTS=(VRL VRL-UG VRL-UserData VRL-NeuroBox-Plugin VRL-NeuronalTopologyImporter-Plugin)
-PROJECTS=(VRL-NeuroBox-Plugin)
+PROJECTS=(VRL-NeuronalTopologyImporter-Plugin)
 
 for project in "${PROJECTS[@]}"; do
 	if [ "$DRY_RUN" = true ]; then
