@@ -21,7 +21,7 @@ ZIP_NAME=natives.zip
 #UG_LIB_ENDING=.so  
 
 #place of the vrl-ug java project (must be replaced by Local/neurobox VRL UG!)
-VRL_UG_JAVA_PROJECT_FOLDER=/Users/ug/Local/neurobox/VRL-UG/VRL-UG/
+VRL_UG_JAVA_PROJECT_FOLDER=/Users/ug/Local/neurobox/release/VRL-UG/VRL-UG/
 #VRL_UG_JAVA_PROJECT_FOLDER=/Users/ug/Apps/VRL-UG/VRL-UG/
 
 #common part of package were natives zips need to be placed
@@ -176,22 +176,23 @@ cd ${VRL_UG_JAVA_PROJECT_FOLDER}
 #call jar
 /usr/local/bin/ant jar
 
+
+echo "copy vrl ug start"
 # kopiere die vrl-ug nach 
-cp /Users/ug/Apps/VRL-UG/VRL-UG/dist/VRL-UG.jar $RLS_DIR/final-jars/
+cp ~/Local/neurobox/release/VRL-UG/VRL-UG/dist/VRL-UG.jar $RLS_DIR/final-jars/plugin-updates/
+echo "copy vrl ug end"
 
 #
 # make a sound if ready with all compilings
 
 # go into project folder
-cd /Users/ug/Local/neurobox/VRL-UserData
-sed -i.bak 's/\(vrl\.dir\).*/\1=\/Volumes\/MacintoshHD2\/neurobox\/final-jars\//' build.properties
+cd /Users/ug/Local/neurobox/release/VRL-UserData
+sed -i.bak "s/\(vrl\.dir\).*/\1=\/Volumes\/MacintoshHD2\/neurobox\/rls\/$RELEASE\/final-jars\//" build.properties
 
-cp $RLS_DIR/VRL-UG.jar jars/
-cp $RLS_DIR/VRL-UG-API.jar jars/
-cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars
-#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG.jar jars/
-#cp /Volumes/MacintoshHD2/neurobox/final-jars/VRL-UG-API.jar jars/
-#cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars/
+#cp $RLS_DIR/VRL-UG.jar jars/
+#cp $RLS_DIR/VRL-UG-API.jar jars/
+
+cp ~/Local/neurobox/release/VRL/VRL/dist/VRL.jar jars
 
 # clean the java project
 /usr/local/bin/ant clean
@@ -202,6 +203,6 @@ cp ~/Local/neurobox/VRL/VRL/dist/VRL.jar jars
 # create a jar file of the java project
 /usr/local/bin/ant jar
 
-git stash
+# git stash
 
-cp dist/VRL-UserData.jar $RLS_DIR/final-jars/
+#cp dist/VRL-UserData.jar $RLS_DIR/final-jars/

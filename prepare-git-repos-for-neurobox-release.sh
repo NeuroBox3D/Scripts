@@ -1,16 +1,23 @@
 ## author: stephanmg <stephan@syntaktischer-zucker.de>
 ## brief: prepares git repositories
 
-BASEDIR=/Users/ug/Local/neurobox/
-#PROJECTS=(VRL VRL-UG VRL-UserData VRL-NeuroBox-Plugin VRL-NeuronalTopologyImporter-Plugin)
-PROJECTS=(VRL-NeuronalTopologyImporter-Plugin)
+BASEDIR=/Users/ug/Local/neurobox/release/
+PROJECTS=(VRL VRL-UG VRL-UserData VRL-NeuronalTopologyImporter-Plugin)
+RELEASE=$1
+#DRY_RUN=true
 
 for project in "${PROJECTS[@]}"; do
 	if [ "$DRY_RUN" = true ]; then
-		echo "cd $basedir/$project; git stash; git checkout $RELEASE"
+		echo "cd $BASEDIR/$project; git stash; git checkout $RELEASE"
 	else 
-		cd "$basedir/$project"
+	if [ ! -d "$BASEDIR/$project" ]; then
+		echo "Check your path-setup for all projects"
+		exit
+	fi
+		cd "$BASEDIR/$project"
 		git stash
+	  git fetch origin $RELEASE
 		git checkout $RELEASE
+		git pull && git stash pop
 	fi
 done
